@@ -1,0 +1,18 @@
+#!/sbin/openrc-run
+
+# 2021-04-25 vkraven
+
+description="Daemon to wake the Pinephone on the next earliest timer or alarm in kclock"
+
+command="/home/user/rtcsync.sh"
+command_background=true
+command_user="user:user"
+pidfile="/run/${RC_SVCNAME}.pid"
+output_log="/var/log/${RC_SVCNAME}/${RC_SVCNAME}.log"
+error_log="/var/log/${RC_SVCNAME}/${RC_SVCNAME}.log"
+
+depend() {
+    need dbus tinydm
+    after tinydm
+}
+
