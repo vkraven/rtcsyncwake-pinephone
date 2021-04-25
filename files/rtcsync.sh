@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/sh
 
 RTCWAKER=/home/user/rtcwaker
 LAST_ALARM=0
