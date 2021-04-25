@@ -8,8 +8,8 @@ command="/home/user/rtcsync.sh"
 command_background=true
 command_user="user:user"
 pidfile="/run/${RC_SVCNAME}.pid"
-output_log="/var/log/${RC_SVCNAME}/${RC_SVCNAME}.log"
-error_log="/var/log/${RC_SVCNAME}/${RC_SVCNAME}.log"
+#output_log="/var/log/${RC_SVCNAME}/${RC_SVCNAME}.log"
+#error_log="/var/log/${RC_SVCNAME}/${RC_SVCNAME}.log"
 
 depend() {
     need dbus tinydm
