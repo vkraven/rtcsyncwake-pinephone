@@ -5,6 +5,13 @@ A simple way to enable the Pinephone to wake itself from sleep (ideally) without
 If you're on a KDE Plasma Mobile PostmarketOS Pinephone, you can also use my shell script and OpenRC 
 init script to have all KClock alarms and timers wake your Pinephone from suspend and ring the alarms.
 
+# Requirements
+
+To run `rtcwaker` without root your kernel must 1) support xattrs on your filesystem and 2) support Linux capabilities.
+
+If your kernel doesn't meet either of those requirements, you can always run `rtcwaker` as a setuid binary 
+(see option 2 below in Configuring `rtcwaker`) or with sudo.
+
 # Installation
 
 ## Building `rtcwaker`
